@@ -4,6 +4,11 @@ require("requires/autoload.php");
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $email = $_POST['email'];
+  $domain = substr(strrchr($email, "@"), 1);
+
+  if ($domain != "woodward.edu") {
+    header("Location: unsupported_school.php");
+  }
 }
 ?>
 <html>
