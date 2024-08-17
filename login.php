@@ -9,7 +9,7 @@ session_start();
   <body>
     <center>
       <h2>Sign into ClassCash</h2><br><br>
-      Please enter your email address below.
+      Please enter your email address below.<br>
       <form method="post">
         <input class="form-control" type="email" name="email" placeholder="Email Address" required><br><br>
         <div class="d-grid gap-2">
