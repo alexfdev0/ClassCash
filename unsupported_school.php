@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("requires/autoload.php");
+//require("requires/autoload.php");
 ?>
 
 <html>
