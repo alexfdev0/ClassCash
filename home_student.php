@@ -48,13 +48,25 @@ $id = $user_data['id'];
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $classid = $row['classid'];
                                 $clink = "class_overview?sel='$classid'";
+                                $name = "";
+                                $descr = "";
+                                $query2 = "select * from classes where id='$classid'";
+                                $result2 = mysqli_query($con, $query);
+                                if ($result2) {
+                                    if (mysqli_num_rows($result2) > 0) {
+                                        while ($row = mysqli_fetch_assoc($result2)) {
+                                            $name = $row['name'];
+                                            $descr = $row['descr'];
+                                        }
+                                    }
+                                }
                                 echo "
                                 <div class='col-md-4'>
                                     <div class='card' style='width: 18rem;'>
                                         <img src='image.jpg' class='card-img-top' alt='...'>
                                         <div class='card-body'>
-                                            <h5 class='card-title'>PLACEHOLDER</h5>
-                                            <p class='card-text'>EXAMPLE TEXT</p>
+                                            <h5 class='card-title'>" . $name . "</h5>
+                                            <p class='card-text'>" . $descr . "</p>
                                             <a href=" . $clink ." class='btn btn-primary'>Go to class</a>
                                         </div>
                                     </div>
