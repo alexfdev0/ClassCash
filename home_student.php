@@ -18,7 +18,7 @@ $user_data = check_login($con);
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home_student.php">ClassCash</a>
-                <div class="collapse navbar-collpase">
+                <div class="collapse navbar-collpase" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
