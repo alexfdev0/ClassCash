@@ -1,14 +1,11 @@
 <?php
-
-$host = "127.0.0.1";
-$user = "u_878558493_classcash";
-$pass = "AlexTheFemboy0";
-$name = "u_878558493_classCash";
-
-$con = mysqli_connect($host, $user, $pass, $name);
-
-if (!con) {
-  die("Failed to connect to ClassCash servers. Please try again later.");
+define('DB_HOST', '127.0.0.1');
+define('DB_USERNAME', 'u878558493_cc');
+define('DB_PASSWORD', 'AlexFlaxIsCool1!');
+define('DB_NAME', 'u878558493_classcash');
+$con = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+if (!$con) {
+  die("Failure connecting to ClassCash servers.");
 }
-
+  
 ?>
