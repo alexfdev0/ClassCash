@@ -50,7 +50,7 @@ $id = $user_data['id'];
                                 $clink = "class_overview?sel='$classid'";
                                 echo "
                                 <div class='col-md-4'>
-                                    <div class='card'>
+                                    <div class='card' style='width: 18rem;'>
                                         <img src='image.jpg' class='card-img-top' alt='...'>
                                         <div class='card-body'>
                                             <h5 class='card-title'>PLACEHOLDER</h5>
