@@ -26,6 +26,9 @@ $clink = "class_overview.php?sel=" . $classid;
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href=<?php echo $clink; ?> class="nav-link"><span class="material-symbols-outlined">account_circle</span> Class Profile</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Me
@@ -34,10 +37,6 @@ $clink = "class_overview.php?sel=" . $classid;
                                 <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href=<?php echo $clink; ?> class="nav-link"><span class="material-symbols-outlined">account_circle</span> Me</a>
-                        </li>
-
                     </ul>
                 </div>
             </div>
