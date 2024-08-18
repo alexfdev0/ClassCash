@@ -5,6 +5,7 @@ $user_data = check_login($con);
 
 $classid = $_GET['sel'];
 $clink = "class_overview.php?sel=" . $classid;
+$slink = "class_store.php?sel=" . $classid;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +29,9 @@ $clink = "class_overview.php?sel=" . $classid;
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a href=<?php echo $clink; ?> class="nav-link"><span class="material-symbols-outlined">account_circle</span> Class Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href=<?php echo $slink; ?> class="nav-link"><span class="material-symbols-outlined">store</span> Shop</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
