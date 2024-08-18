@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <input class="form-control" type="email" name="email" placeholder="Email Address" required><br><br>
         <div class="d-grid gap-2">
           <button class="btn btn-primary" type="submit">Continue</button><br><br>
+          <a class="btn btn-danher" href="home.php">Back</a><br><br>
         </div>
       </form>
     </center>
