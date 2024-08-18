@@ -15,7 +15,7 @@ $user_data = check_login($con);
     </head>
     <body>
 
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home_student.php">ClassCash</a>
                 <div class="collapse navbar-collpase" id="navbarSupportedContent">
