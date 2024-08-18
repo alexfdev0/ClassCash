@@ -11,7 +11,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     die;
   }
 
-  
+  $query = "select * from accounts where email='$email' limit 1";
+  $result = mysqli_query($con, $query);
+
+  if ($result) {
+    if (mysqli_num_rows($result) > 0) {
+      // Account exists
+    } else {
+      // Sign user up
+    }
+  } else {
+    echo "<script>alert('Failed to fetch data from server. Please try again later.')</script>";
+  }
   
 }
 ?>
@@ -30,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <input class="form-control" type="email" name="email" placeholder="Email Address" required><br><br>
         <div class="d-grid gap-2">
           <button class="btn btn-primary" type="submit">Continue</button><br><br>
-          <a class="btn btn-danger" href="home.php">Back</a><br><br>
+          <a class="btn btn-danger" href="home.php">Back</a><br>
         </div>
       </form>
     </center>
