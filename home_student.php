@@ -73,7 +73,7 @@ $id = $user_data['id'];
                                             <a href=" . $clink ." class='btn btn-primary'>Go to class</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div><br>
                                 ";
                             }
                         }
