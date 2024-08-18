@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("requires/autoload.php");
+require "requires/autoload.php";
 
 $email = $_SESSION['logon_email'];
 $code = rand(100000, 999999);

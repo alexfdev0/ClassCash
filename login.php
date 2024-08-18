@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("requires/autoload.php");
+require "requires/autoload.php";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $email = $_POST['email'];
@@ -19,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       $_SESSION['logon_email'] = $email;
       header("Location: email_verification.php");
     } else {
-      // Sign user up
+      $_SESSION['logon_email'] = $email;
+      header("Location: manual_signup.php");
     }
   } else {
     echo "<script>alert('Failed to fetch data from server. Please try again later.')</script>";
@@ -40,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       Please enter your email address below.<br><br>
       <form method="post">
         <input class="form-control" type="email" name="email" placeholder="Email Address" required><br><br>
+        or <br><br>
+        <a class="btn btn-secondary">Log in with Google</a><br><br>
         <div class="d-grid gap-2">
           <button class="btn btn-primary" type="submit">Continue</button><br>
           <a class="btn btn-danger" href="home.php">Back</a><br>

@@ -1,6 +1,7 @@
 <?php
 
-include("sql.php");
-include("funcs.php");
+require "sql.php";
+require "funcs.php";
+require '../vendor/autoload.php'
 
 ?>

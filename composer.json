@@ -1,0 +1,21 @@
+{
+    "name": "alexthefemboy0/classcash",
+    "description": "A highly customizable student rewards system.",
+    "type": "project",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Alexthefemboy0\\Classcash\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alexander Flax",
+            "email": "alexflax772@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "google/apiclient": "^2.17"
+    }
+}
