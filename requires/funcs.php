@@ -9,7 +9,7 @@ function check_login($con) {
       return $user_data;
     }
   }else{
-    header("Location: https://classcash.xyz/login.php");
+    header("Location: https://classcash.xyz/home.php");
   }
 }
 ?>
