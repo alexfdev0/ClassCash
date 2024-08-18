@@ -2,7 +2,7 @@
 session_start();
 require 'requires/autoload.php';
 $user_data = check_login($con);
-
+$id = $user_data['id'];
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +38,35 @@ $user_data = check_login($con);
             </div>
         </nav>
 
-        <h1>Hello, <strong><?php echo $user_data['firstname']; ?></strong>!</h1>
+        <h1>Hello, <strong><?php echo $user_data['firstname']; ?></strong>!</h1><br><br>
+        <h2>My Classes</h2>
+        <div class="container">
+            <div class="row">
+                <?php
+                    $query = "select * from class_entries where studentid = '$id'";
+                    $result = mysqli_query($con, $query);
+                    if ($result) {
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $classid = $row['classid'];
+                                $clink = "class_overview?sel='$classid'";
+                                echo "
+                                <div class='col-md-4'>
+                                    <div class='card'>
+                                        <img src='image.jpg' class='card-img-top' alt='...'>
+                                        <div class='card-body'>
+                                            <h5 class='card-title'>PLACEHOLDER</h5>
+                                            <p class='card-text'>EXAMPLE TEXT</p>
+                                            <a href=" . $clink ." class='btn btn-primary'>Go to class</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                ";
+                            }
+                        }
+                    }
+                ?>
+            </div>
+        </div>
     </body>
 </html>
