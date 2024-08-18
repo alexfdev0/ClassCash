@@ -40,7 +40,6 @@ $id = $user_data['id'];
 
         <h1>Hello, <strong><?php echo $user_data['firstname']; ?></strong>!</h1><br><br>
         <h2>My Classes</h2>
-        <div class="container">
                 <?php
                     $query = "select * from class_entries where studentid = '$id'";
                     $result = mysqli_query($con, $query);
@@ -65,6 +64,5 @@ $id = $user_data['id'];
                         }
                     }
                 ?>
-        </div>
     </body>
 </html>
