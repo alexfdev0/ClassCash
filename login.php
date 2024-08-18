@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
   if ($result) {
     if (mysqli_num_rows($result) > 0) {
-      // Account exists
+      header("Location: email_verification.php");
     } else {
       // Sign user up
     }
