@@ -4,8 +4,8 @@ require_once 'vendor/autoload.php';
 session_start();
 
 $client = new Google_Client();
-$client->setClientId('291381949727-uq2aqmee6jcplkclu58plobkumgfjfqn.apps.googleusercontent.com');
-$client->setClientSecret('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');
+$client->setClientId($_ENV['GOOGLE_CLIENT_ID']);
+$client->setClientSecret($_ENV['GOOGLE_CLIENT_SECRET']);
 $client->setRedirectUri("https://classcash.xyz/callback.php");
 $client->addScope("email");
 $client->addScope("profile");
