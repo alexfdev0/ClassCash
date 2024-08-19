@@ -9,7 +9,7 @@ $clink = "class_overview.php?sel=" . $classid;
 $slink = "class_store.php?sel=" . $classid;
 
 $balance = 0;
-$classname = "";
+$classname = "a";
 
 $query = "select * from balances where studentid='$sid' and classid='$classid'";
 $result = mysqli_query($con, $query);
