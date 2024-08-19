@@ -91,13 +91,13 @@ if ($result2) {
             </div>
         </nav><br>
 
-      <div class="d-flex justify-content-center">
+      <center>
         <h1>Purchase successful</h1><br><br>
         Success! Your purchase has been completed. Depending on your reward, you may need to tell them that you purchased this so they can take appropriate action.<br>
         <div class="d-grid gap-2">
           <a href=<?php echo $slink; ?> class="btn btn-primary">Back to shop</a>
         </div>
-      </div>
+      </center>
 
     </body>
 </html>
