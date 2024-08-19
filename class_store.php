@@ -47,7 +47,7 @@ if ($result2) {
         .card-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
+            gap: 40px;
             padding: 20px;
         }
 
