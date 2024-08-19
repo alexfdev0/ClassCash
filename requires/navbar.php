@@ -1,5 +1,9 @@
 <?php
 
+$clink = "class_overview.php?sel=" . $classid;
+$slink = "class_store.php?sel=" . $classid;
+$tlink = "class_transfer.php?sel=" . $classid;
+
 echo "
 <nav class='navbar navbar-expand-lg navbar-light bg-light'>
             <div class='container-fluid'>
