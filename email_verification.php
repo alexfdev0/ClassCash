@@ -12,7 +12,7 @@ $email = $_SESSION['logon_email'];
 if (!isset($_SESSION['lcode'])) {
   $code = rand(100000, 999999);
   $scode = strval($code);
-  $_SESSION['lcode'];
+  $_SESSION['lcode'] = $scode;
   $MAIL = true;
 }
 
