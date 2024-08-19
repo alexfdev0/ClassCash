@@ -21,7 +21,7 @@ if ($result) {
     }
 }
 
-$query2 = "select * from classes where classid='$classid'";
+$query2 = "select * from classes where id='$classid'";
 $result2 = mysqli_query($con, $query);
 if ($result2) {
     if (mysqli_num_rows($result2) > 0) {
