@@ -15,6 +15,22 @@ $id = $user_data['id'];
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <title>ClassCash</title>
     </head>
+    <style>
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -43,6 +59,7 @@ $id = $user_data['id'];
 
         <h1>Hello, <strong><?php echo $user_data['firstname']; ?></strong>!</h1><br><br>
         <h2>My Classes</h2>
+        <div class="card-container">
                 <?php
                     $query = "select * from class_entries where studentid = '$id'";
                     $result = mysqli_query($con, $query);
@@ -79,5 +96,6 @@ $id = $user_data['id'];
                         }
                     }
                 ?>
+        </div>
     </body>
 </html>
