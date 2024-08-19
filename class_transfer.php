@@ -116,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <input type="text" name="classcoins" class="form-control" placeholder="ClassCoins to Send"><br><br>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary">Send ClassCoins</button>
-                <a href=<?php //echo $plink; ?> class="btn btn-primary">Back to Overview</a>
+                <a href=<?php echo $plink; ?> class="btn btn-primary">Back to Overview</a>
             </div>
         </form>
     </body>
