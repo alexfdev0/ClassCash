@@ -93,7 +93,7 @@ if ($result2) {
             </div>
         </nav><br>
 
-      <div class="d-flex justify-content-center">
+      <center>
         <h1>Purchase failure</h1><br><br>
         Sorry, but your purchase could not be completed because you do not have enough ClassCoins.<br>
         You need <?php echo $diff; ?> more ClassCoins to complete this transaction.<br>
@@ -101,7 +101,7 @@ if ($result2) {
         <div class="d-grid gap-2">
           <a href=<?php echo $slink; ?> class="btn btn-primary">Back to shop</a>
         </div>
-      </div>
+      </center>
 
     </body>
 </html>
