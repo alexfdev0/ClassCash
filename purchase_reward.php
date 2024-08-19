@@ -4,10 +4,6 @@ require "requires/autoload.php";
 $user_data = check_login($con);
 $sid = $user_data['id'];
 
-if (!isset($_GET['rsel'])) {
-    exit;
-}
-
 $classid = $_GET['sel'];
 $rewardid = $_GET['rsel'];
 
