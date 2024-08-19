@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     </style>
     <body>
         <?php
-        require 'requires/navbar.php';
+        //require 'requires/navbar.php';
         ?>
 
         <h1>Transfer ClassCoins</h1><br><br>
