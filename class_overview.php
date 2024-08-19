@@ -6,6 +6,18 @@ $user_data = check_login($con);
 $classid = $_GET['sel'];
 $clink = "class_overview.php?sel=" . $classid;
 $slink = "class_store.php?sel=" . $classid;
+
+$balance = 0;
+
+$query = "select * from balances where studentid='$studentid' and classid='$classid'";
+$result = mysqli_query($con, $query);
+if ($result) {
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $balance = $row['balance'];
+        }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,14 +71,14 @@ $slink = "class_store.php?sel=" . $classid;
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav><br>
 
         <center>
             <div class="profile-picture-container">
                 <img src="pictures/stock.webp" alt="Profile Picture" class="profile-picture">
             </div><br><br>
             <h2><?php echo $user_data['firstname'] . $user_data['lastname'] ?></h2><br>
-            
+            <h3><?php echo $balance ?> ClassCoins</h3><br>
         </center>
 
     </body>
