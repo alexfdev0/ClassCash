@@ -36,6 +36,7 @@ if ($tfr_enabled == 0) {
   header("Location: transfer_disabled.php?sel=" . $classid);
 }
 
+/*
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $recipient = $_POST['email'];
     $amt = $_POST['classcoins'];
@@ -76,6 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
     }
 }
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
