@@ -108,7 +108,7 @@ if ($result2) {
                                     <img src='image.jpg' class='card-img-top' alt='...'>
                                     <div class='card-body'>
                                         <h5 class='card-title'>" . $name . "</h5>
-                                        <p class='card-text'>Price: " . $price . " ClassCoins
+                                        <p class='card-text'>Price: " . $price . " ClassCoins<br>
                                         <a href=" . $rlink ." class='btn btn-primary'>View</a>
                                     </div>
                                 </div>
