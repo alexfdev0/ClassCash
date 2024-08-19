@@ -71,8 +71,8 @@ if ($result2) {
 
       <center>
         <h1>Transfers Disabled</h1><br><br>
-        Sorry, but it seems that your teacher has disabled transferring ClassCoins<br>
-        If you think this is a mistake, please contact your teacher or class owner<br>
+        Sorry, but it seems that your teacher has disabled transferring ClassCoins.<br>
+        If you think this is a mistake, please contact your teacher.<br>
         <div class="d-grid gap-2">
           <a href=<?php echo $plink; ?> class="btn btn-primary">Back to profile</a>
         </div>
