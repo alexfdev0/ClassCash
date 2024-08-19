@@ -7,6 +7,7 @@ $sid = $user_data['id'];
 $classid = $_GET['sel'];
 $clink = "class_overview.php?sel=" . $classid;
 $slink = "class_store.php?sel=" . $classid;
+$tlink = "class_exchange.php?sel=" . $classid;
 
 $balance = 0;
 $classname = "a";
@@ -73,6 +74,9 @@ if ($result2) {
                         </li>
                         <li class="nav-item">
                             <a href=<?php echo $slink; ?> class="nav-link"><span class="material-symbols-outlined">store</span> Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href=<?php echo $tlink; ?> class="nav-link"><span class="material-symbols-outlined">currency_exchange</span> Transfer ClassCoins</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
