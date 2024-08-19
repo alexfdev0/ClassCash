@@ -33,7 +33,7 @@ if ($result2) {
 }
 
 if ($tfr_enabled == 0) {
-  header("Location: transfer_disabled.php");
+  header("Location: transfer_disabled.php?sel=" . $classid);
 }
 
 ?>
