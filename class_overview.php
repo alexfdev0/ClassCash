@@ -18,6 +18,21 @@ $slink = "class_store.php?sel=" . $classid;
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <title>ClassCash - Class Overview</title>
     </head>
+    <style>
+        .profile-picture-container {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .profile-picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -46,6 +61,13 @@ $slink = "class_store.php?sel=" . $classid;
             </div>
         </nav>
 
+        <center>
+            <div class="profile-picture-container">
+                <img src="pictures/stock.webp" alt="Profile Picture" class="profile-picture">
+            </div><br><br>
+            <h2><?php echo $user_data['firstname'] . $user_data['lastname'] ?></h2><br>
+            
+        </center>
 
     </body>
 </html>
