@@ -27,6 +27,8 @@ $body = "
 </html>
 ";
 
+mail($to, $subject, $body, $headers);
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $ucode = $_POST['code'];
 
