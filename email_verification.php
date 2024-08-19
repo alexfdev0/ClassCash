@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
      }
     }
   } else {
-    echo "<script>alert('The code you entered was incorrect. Please check your code and try again.')</script>";
+    echo "<script>alert('The code you entered was incorrect. Please check your code and try again. You put ". $ucode ." but " . $scode . " was right.')</script>";
   }
 }
 
