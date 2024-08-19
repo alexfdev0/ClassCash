@@ -55,7 +55,10 @@ if ($result) {
 }
 
 if ($balance >= $rprice) {
+    $newbalance = $balance - $rprice;
     $query = "insert into inventory (rewardid, studentid) values ('$rid', '$sid')";
+    $result = mysqli_query($con, $query);
+    $query = "update accounts set balance = '$newbalance' where id='$sid'";
     $result = mysqli_query($con, $query);
     header("Location: " . $psuc);
 }else{
