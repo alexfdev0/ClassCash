@@ -94,9 +94,9 @@ if ($result2) {
             </div>
         </nav><br>
 
-        <h1>Reward Overview</h1><br><br>
-        <h2><?php echo $rname; ?></h2><br><br>
-        <h3>Overview</h3><br><br>
+        <h1>Rewards</h1><br><br>
+        <h2><?php echo $rname; ?></h2><br>
+        <h3>Overview</h3><br>
         Price: <?php echo $rprice; ?><br><br>
         <h3>Description</h3><br>
         <?php echo $rdescr; ?>
