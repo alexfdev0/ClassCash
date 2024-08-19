@@ -6,8 +6,14 @@ if (!isset($_SESSION['logon_email'])) {
   exit;
 }
 $email = $_SESSION['logon_email'];
-$code = rand(100000, 999999);
-$scode = strval($code);
+if (!isset($_SESSION['lcode'])) {
+  $code = rand(100000, 999999);
+  $scode = strval($code);
+  $_SESSION['lcode'];
+  $MAIL = true;
+}
+
+$MAIL = false;
 
 $from = "service@classcash.xyz";
 $to = $email;
@@ -28,12 +34,14 @@ $body = "
 </html>
 ";
 
-mail($to, $subject, $body, $headers);
+if ($MAIL == true) {
+  mail($to, $subject, $body, $headers);
+}
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $ucode = $_POST['code'];
 
-  if ($ucode == $scode) {
+  if ($ucode == $_SESSION['lcode']) {
     $query = "select * from accounts where email='$email'";
     $result = mysqli_query($con, $query);
     if ($result) {
