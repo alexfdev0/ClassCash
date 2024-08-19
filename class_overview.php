@@ -2,6 +2,7 @@
 session_start();
 require "requires/autoload.php";
 $user_data = check_login($con);
+$sid = $user_data['id'];
 
 $classid = $_GET['sel'];
 $clink = "class_overview.php?sel=" . $classid;
@@ -9,7 +10,7 @@ $slink = "class_store.php?sel=" . $classid;
 
 $balance = 0;
 
-$query = "select * from balances where studentid='$studentid' and classid='$classid'";
+$query = "select * from balances where studentid='$sid' and classid='$classid'";
 $result = mysqli_query($con, $query);
 if ($result) {
     if (mysqli_num_rows($result) > 0) {
