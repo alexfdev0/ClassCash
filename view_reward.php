@@ -100,7 +100,7 @@ if ($result2) {
         <h3>Overview</h3><br>
         Price: <?php echo $rprice; ?><br><br>
         <h3>Description</h3><br>
-        <?php echo $rdescr; ?><br>
+        <?php echo $rdescr; ?><br><br>
         <div class="d-grid gap-2">
             <a class="btn btn-primary" href=<?php echo $plink; ?>>Purchase Reward</a><br>
             <a class="btn btn-danger" href=<?php echo $slink; ?>>Cancel</a>
