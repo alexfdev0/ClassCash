@@ -36,6 +36,46 @@ if ($tfr_enabled == 0) {
   header("Location: transfer_disabled.php?sel=" . $classid);
 }
 
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $recipient = $_POST['email'];
+    $amt = $_POST['classcoins'];
+
+    $query = "select * from accounts where email='$recipient' limit 1";
+    $result = mysqli_query($con, $query)
+    if ($result) {
+        if (mysqli_num_rows($result) > 0) {
+            if ($balance >= $amt) {
+                $recipid = 0;
+                $recipbal = 0;
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $recipid = $row['id'];
+                }
+                $query = "select * from balances where studentid='$recipid' and classid='$classid'";
+                $result = mysqli_query($con, $query);
+                if ($result) {
+                    if (mysqli_num_rows($result) > 0) {
+                        $newBalance = $balance - $amt;
+                        $query2 = "update balances set balance='$newBalance' where studentid='$sid' and classid='$classid'";
+                        $result2 = mysqli_query($con, $query2);
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $recipbal = $row['balance'];
+                            $amtafter = $recipbal + $amt;
+                            $query = "update balances set balance='$amtafter' where studentid='$recipid' and classid='$classid'";
+                            $result = mysqli_query($con, $query);
+                            header("Location: transfer_successful.php?sel=" . $classid);
+                        }
+                    }else{
+                        echo "<script>alert('Transfer failure: User does not exist within this class..')</script>";
+                    }
+                }
+            }else{
+                echo "<script>alert('Transfer failure: Insufficient funds.')</script>";
+            }
+        }else{
+            echo "<script>alert('Transfer failure: User with that email does not exist.')</script>";
+        }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,35 +109,15 @@ if ($tfr_enabled == 0) {
         require 'requires/navbar.php';
         ?>
 
-        <h1>Rewards</h1><br><br>
+        <h1>Transfer ClassCoins</h1><br><br>
 
-        <div class="card-container">
-            <?php
-                    $query = "select * from rewards where classid = '$classid'";
-                    $result = mysqli_query($con, $query);
-                    if ($result) {
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $id = $row['id'];
-                                $name = $row['name'];
-                                $descr = $row['descr'];
-                                $price = $row['price'];
-
-                                $rlink = "view_reward.php?sel=" . $classid . "&rsel=" . $id;
-                                echo "
-                                <div class='card' style='width: 15rem;'>
-                                    <img src='image.jpg' class='card-img-top' alt='...'>
-                                    <div class='card-body'>
-                                        <h5 class='card-title'>" . $name . "</h5>
-                                        <p class='card-text'>Price: " . $price . " ClassCoins<br>
-                                        <a href=" . $rlink ." class='btn btn-primary'>View</a>
-                                    </div>
-                                </div>
-                                ";
-                            }
-                        }
-                    }
-            ?>
-        </div>
+        <form method="post">
+            <input type="email" name="email" class="form-control" placeholder="Recipient Email Address"><br><br>
+            <input type="text" name="classcoins" class="form-control" placeholder="ClassCoins to Send"><br><br>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Send ClassCoins</button>
+                <a href=<?php echo $plink; ?> class="btn btn-primary">Back to Overview</a>
+            </div>
+        </form>
     </body>
 </html>
