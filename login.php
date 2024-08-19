@@ -12,6 +12,7 @@
     <body>
         <center>
             <h1>Let's get you going</h1><br><br>
+            <h4>Who are you?</h4><br>
             <div class="d-grid gap-2">
                 <a href="login_student.php" class="btn btn-primary">I'm a student</a>
                 <a href="login_educator.php" class="btn btn-primary">I'm a teacher</a>
