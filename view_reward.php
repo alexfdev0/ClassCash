@@ -98,7 +98,7 @@ if ($result2) {
         <h1>Rewards</h1><br>
         <h2><?php echo $rname; ?></h2><br>
         <h3>Overview</h3><br>
-        Price: <?php echo $rprice; ?><br><br>
+        Price: <?php echo $rprice; ?> ClassCoins<br><br>
         <h3>Description</h3><br>
         <?php echo $rdescr; ?><br><br>
         <div class="d-grid gap-2">
