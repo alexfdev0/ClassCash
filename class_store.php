@@ -104,7 +104,7 @@ if ($result2) {
 
                                 $rlink = "view_reward.php?sel=" . $classid . "&rsel=" . $id;
                                 echo "
-                                <div class='card' style='width: 18rem;'>
+                                <div class='card' style='width: 15rem;'>
                                     <img src='image.jpg' class='card-img-top' alt='...'>
                                     <div class='card-body'>
                                         <h5 class='card-title'>" . $name . "</h5>
