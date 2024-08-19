@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <input class="form-control" type="email" name="email" placeholder="Email Address" required><br><br>
         <div class="d-grid gap-2">
           <button class="btn btn-primary" type="submit">Continue</button><br>
-        </div><br>
+        </div>
         or<br><br>
         <div class="d-grid gap-2">
           <a href="login_google_student.php" class="btn btn-secondary">
