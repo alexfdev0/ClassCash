@@ -50,7 +50,7 @@ $id = $user_data['id'];
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="join_class.php" class="nav-link"><span class="material-symbols-outlined">add</span>Join a Class</a>
+                            <a href="join_class.php" class="nav-link"><span class="material-symbols-outlined">add</span> Join a Class</a>
                         </li>
                     </ul>
                 </div>
