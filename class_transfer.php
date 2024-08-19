@@ -40,6 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $recipient = $_POST['email'];
     $amt = $_POST['classcoins'];
 
+    if ($amt < 1) {
+        echo "<script>alert('Transfer failure: Transfer amount must be more than 0.')</script>";
+        return;
+    }
+
     $query = "select * from accounts where email='$recipient' limit 1";
     $result = mysqli_query($con, $query);
     if ($result) {
@@ -116,7 +121,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <input type="text" name="classcoins" class="form-control" placeholder="ClassCoins to Send"><br><br>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary">Send ClassCoins</button>
-                <a href=<?php echo $plink; ?> class="btn btn-primary">Back to Overview</a>
             </div>
         </form>
     </body>
