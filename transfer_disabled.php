@@ -74,7 +74,7 @@ if ($result2) {
         Sorry, but it seems that your teacher has disabled transferring ClassCoins.<br>
         If you think this is a mistake, please contact your teacher.<br>
         <div class="d-grid gap-2">
-          <a href=<?php echo $plink; ?> class="btn btn-primary">Back to profile</a>
+          <a href=<?php echo $clink; ?> class="btn btn-primary">Back to profile</a>
         </div>
       </center>
 
