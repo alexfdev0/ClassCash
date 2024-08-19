@@ -5,6 +5,9 @@ require "requires/autoload.php";
 if (!isset($_SESSION['logon_email'])) {
   exit;
 }
+
+$MAIL = false;
+
 $email = $_SESSION['logon_email'];
 if (!isset($_SESSION['lcode'])) {
   $code = rand(100000, 999999);
@@ -12,8 +15,6 @@ if (!isset($_SESSION['lcode'])) {
   $_SESSION['lcode'];
   $MAIL = true;
 }
-
-$MAIL = false;
 
 $from = "service@classcash.xyz";
 $to = $email;
