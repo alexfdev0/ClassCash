@@ -50,7 +50,7 @@ $id = $user_data['id'];
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $classid = $row['classid'];
-                                $clink = "class_overview.php?sel='$classid'";
+                                $clink = "class_overview.php?sel=" . $classid;
                                 $name = "";
                                 $descr = "";
                                 $query2 = "select * from classes where id='$classid'";
