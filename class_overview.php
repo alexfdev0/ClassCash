@@ -21,11 +21,11 @@ if ($result) {
     }
 }
 
-$query = "select * from classes where classid='$classid'";
-$result = mysqli_query($con, $query);
-if ($result) {
-    if (mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
+$query2 = "select * from classes where classid='$classid'";
+$result2 = mysqli_query($con, $query);
+if ($result2) {
+    if (mysqli_num_rows($result2) > 0) {
+        while ($row = mysqli_fetch_assoc($result2)) {
             $classname = $row['name'];
         }
     }
