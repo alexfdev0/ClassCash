@@ -1,4 +1,4 @@
-<d?php
+<?php
 session_start();
 require "requires/autoload.php";
 $user_data = check_login($con);
