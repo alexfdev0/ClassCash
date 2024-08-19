@@ -7,6 +7,7 @@ if (!isset($_SESSION['logon_email'])) {
 }
 $email = $_SESSION['logon_email'];
 $code = rand(100000, 999999);
+$scode = strval($code);
 
 $from = "service@classcash.xyz";
 $to = $email;
@@ -32,7 +33,7 @@ mail($to, $subject, $body, $headers);
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $ucode = $_POST['code'];
 
-  if ($ucode == $code) {
+  if ($ucode == $scode) {
     $query = "select * from accounts where email='$email'";
     $result = mysqli_query($con, $query);
     if ($result) {
