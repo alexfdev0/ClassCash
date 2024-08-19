@@ -36,13 +36,12 @@ if ($tfr_enabled == 0) {
   header("Location: transfer_disabled.php?sel=" . $classid);
 }
 
-/*
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $recipient = $_POST['email'];
     $amt = $_POST['classcoins'];
 
     $query = "select * from accounts where email='$recipient' limit 1";
-    $result = mysqli_query($con, $query)
+    $result = mysqli_query($con, $query);
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
             if ($balance >= $amt) {
@@ -77,7 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
     }
 }
-*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
