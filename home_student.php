@@ -20,7 +20,7 @@ $id = $user_data['id'];
         .card-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 25px;
+            gap: 15px;
             padding: 20px;
         }
 
