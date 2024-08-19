@@ -9,6 +9,7 @@ $clink = "class_overview.php?sel=" . $classid;
 $slink = "class_store.php?sel=" . $classid;
 
 $balance = 0;
+$classname = "";
 
 $query = "select * from balances where studentid='$sid' and classid='$classid'";
 $result = mysqli_query($con, $query);
@@ -19,6 +20,17 @@ if ($result) {
         }
     }
 }
+
+$query = "select * from classes where classid='$classid'";
+$result = mysqli_query($con, $query);
+if ($result) {
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $classname = $row['name'];
+        }
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,6 +62,7 @@ if ($result) {
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home_student.php">ClassCash</a>
+                <label class="navbar-brand"><?php echo $classname; ?></label>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
