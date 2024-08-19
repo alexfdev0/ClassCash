@@ -10,8 +10,8 @@ $rewardid = $_GET['rsel'];
 $clink = "class_overview.php?sel=" . $classid;
 $slink = "class_store.php?sel=" . $classid;
 
-$pfail = "purchase_fail_insuf?sel=" . $classid . "&rsel=" . $rewardid;
-$psuc = "purchase_comp?sel=" . $classid . "&rsel=" . $rewardid;
+$pfail = "purchase_fail_insuf.php?sel=" . $classid . "&rsel=" . $rewardid;
+$psuc = "purchase_comp.php?sel=" . $classid . "&rsel=" . $rewardid;
 
 $balance = 0;
 $classname = "a";
