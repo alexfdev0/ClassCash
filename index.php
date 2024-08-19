@@ -4,6 +4,7 @@ session_start();
 require 'requires/autoload.php';
 if ($APP_OPEN == false) {
     header("Location: index.html");
+    exit;
 }
 $user_data = check_login($con);
 
