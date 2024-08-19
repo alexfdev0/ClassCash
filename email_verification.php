@@ -2,6 +2,9 @@
 session_start();
 require "requires/autoload.php";
 
+if (!isset($_SESSION['logon_email'])) {
+  exit;
+}
 $email = $_SESSION['logon_email'];
 $code = rand(100000, 999999);
 
