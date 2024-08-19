@@ -97,17 +97,19 @@ if ($result2) {
                     if ($result) {
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
+                                $id = $row['id'];
                                 $name = $row['name'];
                                 $descr = $row['descr'];
                                 $price = $row['price'];
+
+                                $rlink = "view_reward.php?sel=" . $classid . "&rsel=" . $id;
                                 echo "
                                 <div class='card' style='width: 18rem;'>
                                     <img src='image.jpg' class='card-img-top' alt='...'>
                                     <div class='card-body'>
                                         <h5 class='card-title'>" . $name . "</h5>
-                                        <p class='card-text'>" . $descr . "</p><br>
                                         <p class='card-text'>Price: " . $price . " ClassCoins
-                                        <a href=" . $clink ." class='btn btn-primary'>Go to class</a>
+                                        <a href=" . $rlink ." class='btn btn-primary'>View</a>
                                     </div>
                                 </div>
                                 ";
