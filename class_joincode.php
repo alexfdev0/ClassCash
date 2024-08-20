@@ -10,6 +10,7 @@ if ($user_data['educator'] == 0) {
 }
 
 $classid = $_GET['sel'];
+$idnum = (int)$classid;
 $code = 0;
 $cstr = strval($code);
 
@@ -22,7 +23,7 @@ if ($result2) {
         while ($row = mysqli_fetch_assoc($result2)) {
             $classname = $row['name'];
             $code = $row['classcode'];
-            if ($sid != $classid) {
+            if ($sid != $idnum) {
                 echo "Unauthorized.";
                 exit;
             }
