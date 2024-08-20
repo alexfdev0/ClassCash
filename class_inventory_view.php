@@ -105,9 +105,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         Price: <?php echo $rprice; ?> ClassCoins<br>
         Owner: <?php echo $rowner_fname . " " . $rowner_lname; ?><br>
         <h2>Actions</h2><br>
-            <form method="post">
-                <button type="submit" class="btn btn-danger"> Mark as redeemed</button>
-                <a href=<?php echo $cilink; ?> class="btn btn-primary">Back</a>
-            </form>
+            <div class="d-grid gap-2">
+                <a href="redeem_reward.php" class="btn btn-danger"><span class="material-icons-outlined">security</span>Mark as redeemed</a>
+            </div>
     </body>
 </html>
