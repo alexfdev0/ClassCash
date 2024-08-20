@@ -10,7 +10,7 @@ if ($user_data['educator'] == 0) {
 }
 
 $classid = $_GET['sel'];
-$rewardid = $_GET['rsel'];
+$inventoryid = $_GET['rsel'];
 
 $classname = "a";
 
@@ -22,6 +22,20 @@ $rowner_fname = "";
 $rowner_lname = "";
 $time = "";
 
+$rewardid = 0;
+
+$query0 = "select * from inventory where id='$inventoryid'";
+$result = mysqli_query($con, $query);
+if ($result) {
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $rewardid = $row['rewardid'];
+            $rowner = $row['studentid'];
+            $time = $row['time'];
+        }
+    }
+}
+
 $query = "select * from rewards where id='$rewardid'";
 $result = mysqli_query($con, $query);
 if ($result) {
@@ -29,9 +43,7 @@ if ($result) {
         while ($row = mysqli_fetch_assoc($result)) {
             $rname = $row['name'];
             $rdescr = $row['descr'];
-            $rowner = $row['studentid'];
             $rprice = $row['price'];
-            $time = $row['time'];
         }
     }
 }
@@ -67,7 +79,7 @@ $link = "redeem_reward.php?sel=" . $classid . "&rsel=" . $rewardid;
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $val = 1;
-    $query = "update rewards set redeemed='$VAL' where id='$rewardid'";
+    $query = "update inventory set redeemed='$VAL' where id='$inventoryid'";
     $result = mysqli_query($con, $query);
     if ($result) {
         header("Location: " . $cilink);

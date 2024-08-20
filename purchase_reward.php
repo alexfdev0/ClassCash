@@ -52,7 +52,7 @@ if ($result) {
 
 if ($balance >= $rprice) {
     $newbalance = $balance - $rprice;
-    $query = "insert into inventory (rewardid, studentid) values ('$rid', '$sid')";
+    $query = "insert into inventory (rewardid, studentid, classid) values ('$rid', '$sid', '$classid')";
     $result = mysqli_query($con, $query);
     $query = "update balances set balance='$newbalance' where studentid='$sid' and classid='$classid'";
     $result = mysqli_query($con, $query);

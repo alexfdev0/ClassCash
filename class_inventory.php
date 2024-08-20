@@ -73,7 +73,7 @@ if ($result2) {
             <tbody>
                 <?php
                 $rval = 0;
-                $query = "select * from rewards where classid='$classid' and redeemed='$rval'";
+                $query = "select * from inventory where classid='$classid' and redeemed='$rval'";
                 $result = mysqli_query($con, $query);
                 if ($result) {
                     if (mysqli_num_rows($result) > 0) {
