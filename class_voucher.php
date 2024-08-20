@@ -72,7 +72,7 @@ if ($result2) {
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $name = $row['name'];
-                                $price = $row['price'];
+                                $price = $row['points'];
 
                                 $vlink = "class_voucher_give.php?sel=" . $classid . "&vsel=" . $id;
                                 echo "
