@@ -71,7 +71,7 @@ if ($user_data['educator'] == 0) {
                     if ($result) {
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
-                                $classid = $row['classid'];
+                                $classid = $row['id'];
                                 $clink = "class_mgmt.php?sel=" . $classid;
                                 $name = "";
                                 $descr = "";
