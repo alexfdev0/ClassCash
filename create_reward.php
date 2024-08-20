@@ -78,6 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <input name="points" class="form-control" placeholder="Point Cost"><br><br>
             <button type="submit" class="btn btn-primary">Create Reward</button>
         </form>
-        <a href="create_reward.php" class="btn btn-primary">Create a reward</a><br><br>
+        <a href=<?php echo $selink; ?> class="btn btn-primary">Back</a><br><br>
     </body>
 </html>
