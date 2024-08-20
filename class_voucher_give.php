@@ -54,8 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         if ($result3) {
                             if (mysqli_num_rows($result3) > 0) {
                                 while ($row = mysqli_fetch_assoc($result3)) {
-                                    $balance = $row['balance'];
-                                    $newbalance = $balance + $rprice;
+                                    $balance2 = $row['balance'];
+                                    $newbalance = $balance2 + $rprice;
                                     $query4 = "update balances set balance='$newbalance' where studentid='$stuid' and classid='$classid'";
                                     $result4 = mysqli_query($con, $query4);
                                     if ($result4) {
