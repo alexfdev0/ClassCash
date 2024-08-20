@@ -1,6 +1,6 @@
 <?php
 
-$clink = "class_mgmtphp?sel=" . $classid;
+$clink = "class_mgmt.php?sel=" . $classid;
 $slink = "class_joincode.php?sel=" . $classid;
 $tlink = "class_transfer.php?sel=" . $classid;
 
