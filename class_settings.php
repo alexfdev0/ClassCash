@@ -70,7 +70,7 @@ if ($result2) {
             <textarea class="form-control" rows="3" placeholder="Class Description" value=<?php echo $classdescr; ?>></textarea><br><br>
             <h4>Class Settings</h4><br>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="enableTransfers" <?php if ($tfrenabled == 0) { echo "checked"; }?>>
+                <input class="form-check-input" type="checkbox" value="" id="enableTransfers" <?php if ($tfrenabled == 1) { echo "checked"; }?>>
                 <label class="form-check-label" for="enableTransfers">
                     Allow students to send and recieve ClassCoins from eachother.
                 </label>
