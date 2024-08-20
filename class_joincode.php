@@ -10,6 +10,8 @@ if ($user_data['educator'] == 0) {
 }
 
 $classid = $_GET['sel'];
+$code = 0;
+$cstr = strval($code);
 
 $classname = "a";
 
@@ -19,6 +21,7 @@ if ($result2) {
     if (mysqli_num_rows($result2) > 0) {
         while ($row = mysqli_fetch_assoc($result2)) {
             $classname = $row['name'];
+            $code = $row['classcode'];
             if ($sid != $classid) {
                 echo "Unauthorized.";
                 exit;
@@ -58,45 +61,10 @@ if ($result2) {
         <?php
         require 'requires/navbar_educator.php';
         ?>
-        <h1>Students</h1><br><br>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $query = "select * from class_entries where classid='$classid'";
-                $result = mysqli_query($con, $query);
-                if ($result) {
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            $studentid = $row['studentid'];
-                            $fname = "";
-                            $lname = "";
-                            $query2 = "select * from accounts where id='$studentid'";
-                            $result2 = mysqli_query($con, $query2);
-                            if ($result2) {
-                                if (mysqli_num_rows($result2) > 0) {
-                                    while ($row = mysqli_fetch_assoc($result2)) {
-                                        $fname = $row["firstname"];
-                                        $lname = $row["lastname"];
-                                    }
-                                }
-                            }
-                            echo "
-                            <tr>
-                                <td>" . $fname . "</td>
-                                <td>" . $lname . "</td>
-                            </tr>
-                            ";
-                        }
-                    }
-                }
-                ?>
-            </tbody>
-        </table>
+        <center>
+            <h1>ClassCash Join Code</h1><br><br>
+            <h1><?php echo $cstr; ?></h1><br><br>
+            <h3>Go to <strong>https://classcash.xyz/join_class.php</strong> to join this class.</h3>
+        </center>
     </body>
 </html>

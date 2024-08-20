@@ -1,7 +1,7 @@
 <?php
 
 $clink = "class_mgmtphp?sel=" . $classid;
-$slink = "class_store.php?sel=" . $classid;
+$slink = "class_joincode.php?sel=" . $classid;
 $tlink = "class_transfer.php?sel=" . $classid;
 
 echo "
