@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         Owner: <?php echo $rowner_fname . " " . $rowner_lname; ?><br>
         <h2>Actions</h2><br>
             <div class="d-grid gap-2">
-                <span class="material-icons-outlined">security</span><a href="redeem_reward.php" class="btn btn-danger">Mark as redeemed</a><span class="material-icons-outlined">security</span>
+                <a href="redeem_reward.php" class="btn btn-danger">Mark as redeemed</a>
             </div>
     </body>
 </html>
