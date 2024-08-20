@@ -74,7 +74,7 @@ if ($result2) {
                                 $name = $row['name'];
                                 $price = $row['points'];
 
-                                $vlink = "class_voucher_give.php?sel=" . $classid . "&vsel=" . $id . "&semail=" . ;
+                                $vlink = "class_voucher_give.php?sel=" . $classid . "&vsel=" . $id;
                                 echo "
                                 <div class='card' style='width: 15rem;'>
                                     <img src='image.jpg' class='card-img-top' alt='...'>
