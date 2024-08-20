@@ -72,7 +72,7 @@ if ($result2) {
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $name = $row['name'];
-                                $price = $row['points'];
+                                $price = $row['price'];
 
                                 $vlink = "class_voucher_give.php?sel=" . $classid . "&vsel=" . $id;
                                 echo "
@@ -80,7 +80,7 @@ if ($result2) {
                                     <img src='image.jpg' class='card-img-top' alt='...'>
                                     <div class='card-body'>
                                         <h5 class='card-title'>" . $name . "</h5>
-                                        <p class='card-text'>Price: " . $price . " ClassCoins<br>
+                                        <p class='card-text'>Points: " . $price . " ClassCoins<br>
                                         <a href=" . $vlink ." class='btn btn-primary'>View</a>
                                     </div>
                                 </div>
