@@ -11,7 +11,6 @@ if ($user_data['educator'] == 0) {
 
 $classid = $_GET['sel'];
 $code = 0;
-$cstr = strval($code);
 
 $classname = "a";
 
@@ -30,6 +29,8 @@ if ($result2) {
         }
     }
 }
+
+$cstr = strval($code);
 
 ?>
 <!DOCTYPE html>
