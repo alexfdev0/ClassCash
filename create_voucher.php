@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $name = $_POST['reward_name'];
     $descr = $_POST['reward_descr'];
     $points = $_POST['points'];
-    $query = "insert into voucher (name, descr, classid, points) values ('$name', '$descr', '$classid', '$price')";
+    $query = "insert into voucher (name, descr, class, points) values ('$name', '$descr', '$classid', '$price')";
     $result = mysqli_query($con, $query);
 }
 

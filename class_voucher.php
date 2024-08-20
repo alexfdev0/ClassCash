@@ -66,7 +66,7 @@ if ($result2) {
 
         <div class="card-container">
             <?php
-                    $query = "select * from voucher where classid = '$classid'";
+                    $query = "select * from voucher where class = '$classid'";
                     $result = mysqli_query($con, $query);
                     if ($result) {
                         if (mysqli_num_rows($result) > 0) {
