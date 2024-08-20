@@ -102,12 +102,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <h1>Reward Details</h1><br>
         <h2><?php echo $rname; ?></h2><br>
         <h3>Overview</h3><br>
-        Price: <?php echo $rprice; ?> ClassCoins
+        Price: <?php echo $rprice; ?> ClassCoins<br>
         Owner: <?php echo $rowner_firstname . " " . $rowner_lname; ?><br>
         <h2>Actions</h2><br>
         <div class="d-grid gap-2">
             <form method="post">
-                <button type="submit" class="btn btn-danger"><span class="material-icons-outlined">security</span> Mark as redeemed</button>
+                <button type="submit" class="btn btn-danger"> Mark as redeemed</button>
             </form>
         </div>
     </body>
