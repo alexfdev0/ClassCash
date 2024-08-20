@@ -32,6 +32,9 @@ if ($result2) {
     }
 }
 
+$crlink = "create_reward.php?sel=" . $classid;
+$cvlink = "create_voucher.php?sel=" . $classid;
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $cname = $_POST['class_name'];
     $cdesc = $_POST['class_descr'];
@@ -97,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             </div><br><br>
             <button type="submit" class="btn btn-primary">Save Settings</button><br><br>
         </form>
-        <a href="create_reward.php" class="btn btn-primary">Create a reward</a><br><br>
-        <a href="create_voucher.php" class="btn btn-primary">Create a voucher</a>
+        <a href=<?php echo $crlink; ?> class="btn btn-primary">Create a reward</a><br><br>
+        <a href=<?php echo $cvlink; ?> class="btn btn-primary">Create a voucher</a>
     </body>
 </html>
