@@ -20,6 +20,7 @@ $rowner = 0;
 $rprice = 0;
 $rowner_fname = "";
 $rowner_lname = "";
+$time = "";
 
 $query = "select * from rewards where id='$rewardid'";
 $result = mysqli_query($con, $query);
@@ -30,6 +31,7 @@ if ($result) {
             $rdescr = $row['descr'];
             $rowner = $row['studentid'];
             $rprice = $row['price'];
+            $time = $row['time'];
         }
     }
 }
@@ -107,6 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <h3>Overview</h3><br>
         Price: <?php echo $rprice; ?> ClassCoins<br>
         Owner: <?php echo $rowner_fname . " " . $rowner_lname; ?><br>
+        Time purchased: <?php echo $time; ?><br>
         <h2>Actions</h2><br>
             <div class="d-grid gap-2">
                 <a href=<?php echo $link; ?>  class="btn btn-danger">Mark as redeemed</a>

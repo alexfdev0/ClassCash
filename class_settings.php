@@ -96,6 +96,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </label>
             </div><br><br>
             <button type="submit" class="btn btn-primary">Save Settings</button>
-    </form>
+        </form>
+        <a href="create_reward.php" class="btn btn-primary">Create a reward</a><br><br>
+        <a href="create_voucher.php" class="btn btn-primary">Create a voucher</a>
     </body>
 </html>
