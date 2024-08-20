@@ -12,6 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (mysqli_num_rows($result) > 0) {
       $_SESSION['logon_email'] = $email;
       $eval = 1;
+      if (isset($_SESSION['lcode'])) {
+        unset($_SESSION['lcode']);
+      }
       header("Location: email_verification.php?e=" . $eval);
     } else {
       $_SESSION['logon_email'] = $email;

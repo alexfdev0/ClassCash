@@ -11,6 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   if ($result) {
     if (mysqli_num_rows($result) > 0) {
       $_SESSION['logon_email'] = $email;
+      if (isset($_SESSION['lcode'])) {
+        unset($_SESSION['lcode']);
+      }
       header("Location: email_verification.php");
     } else {
       $_SESSION['logon_email'] = $email;
