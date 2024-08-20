@@ -40,11 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['tfrs'])) {
         $tfrsenabled = 1;
     }
-    if ($cname != "") {
+    if ($cname != "" && $cname != $classname) {
         $query = "update classes set name='$cname' where id='$classid'";
         $result = mysqli_query($con, $query);
     }
-    if ($cdesc != "") {
+    if ($cdesc != "" && $cname != $classname) {
         $query = "update classes set descr='$cdesc' where id='$classid'";
         $result = mysqli_query($con, $query);
     }
