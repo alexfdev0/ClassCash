@@ -2,7 +2,7 @@
 
 $clink = "class_mgmt.php?sel=" . $classid;
 $slink = "class_joincode.php?sel=" . $classid;
-$tlink = "class_settings.php?sel=" . $classid;
+$tlink = "class_voucher.php?sel=" . $classid;
 $cilink = "class_inventory.php?sel=" . $classid;
 
 echo "

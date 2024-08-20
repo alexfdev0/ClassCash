@@ -4,16 +4,27 @@ require "requires/autoload.php";
 $user_data = check_login($con);
 $sid = $user_data['id'];
 
-if ($user_data['educator'] == 0) {
-    echo "Unauthorized.";
-    exit;
-}
-
 $classid = $_GET['sel'];
+$rewardid = $_GET['rsel'];
+$clink = "class_voucher.php?sel=" . $classid;
+$slink = "class_store.php?sel=" . $classid;
 
+$rname = "";
+$rdescr = "";
+$rprice = 0;
+
+$balance = 0;
 $classname = "a";
-$classdescr = "";
-$tfrenabled = 0;
+
+$query = "select * from rewards where id='$rewardid'";
+$result = mysqli_query($con, $query);
+if ($result) {
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $rprice = $row['price'];
+        }
+    }
+}
 
 $query2 = "select * from classes where id='$classid'";
 $result2 = mysqli_query($con, $query2);
@@ -21,25 +32,9 @@ if ($result2) {
     if (mysqli_num_rows($result2) > 0) {
         while ($row = mysqli_fetch_assoc($result2)) {
             $classname = $row['name'];
-            $classdescr = $row['descr'];
-            $owner = $row['owner'];
-            $tfrenabled = $row['tfrenabled'];
-            if ($sid != $owner) {
-                echo "Unauthorized.";
-                exit;
-            }
         }
     }
 }
-
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $name = $_POST['reward_name'];
-    $descr = $_POST['reward_descr'];
-    $points = $_POST['points'];
-    $query = "insert into rewards (name, descr, classid, price) values ('$name', '$descr', '$classid', '$price')";
-    $result = mysqli_query($con, $query);
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,15 +64,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     </style>
     <body>
         <?php
-        require 'requires/navbar_educator.php';
+        require 'requires/navbar.php';
         ?>
-        <h1>Create Reward</h1><br><br>
-        <form method="post">
-            <input name="reward_name" class="form-control" placeholder="Reward Name"><br><br>
-            <textarea name="reward_descr" class="form-control" rows="3" placeholder="Reward Description"></textarea><br><br>
-            <input name="points" class="form-control" placeholder="Point Cost"><br><br>
-            <button type="submit" class="btn btn-primary">Create Reward</button>
-        </form>
-        <a href="create_reward.php" class="btn btn-primary">Create a reward</a><br><br>
+
+      <center>
+        <h1>Voucher give successful</h1><br><br>
+        Success! You have successfully sent the student that voucher.<br>
+        <div class="d-grid gap-2">
+          <a href=<?php echo $plink; ?> class="btn btn-primary">Back to overview</a>
+        </div>
+      </center>
+
     </body>
 </html>

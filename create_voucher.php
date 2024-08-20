@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $name = $_POST['reward_name'];
     $descr = $_POST['reward_descr'];
     $points = $_POST['points'];
-    $query = "insert into rewards (name, descr, classid, price) values ('$name', '$descr', '$classid', '$price')";
+    $query = "insert into voucher (name, descr, classid, points) values ('$name', '$descr', '$classid', '$price')";
     $result = mysqli_query($con, $query);
 }
 
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <?php
         require 'requires/navbar_educator.php';
         ?>
-        <h1>Create Reward</h1><br><br>
+        <h1>Create Voucher</h1><br><br>
         <form method="post">
             <input name="reward_name" class="form-control" placeholder="Reward Name"><br><br>
             <textarea name="reward_descr" class="form-control" rows="3" placeholder="Reward Description"></textarea><br><br>
