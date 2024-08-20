@@ -15,7 +15,7 @@ echo "
                 <div class='collapse navbar-collapse' id='navbarSupportedContent'>
                     <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
                         <li class='nav-item'>
-                            <a href='" . $clink . "' class='nav-link'><span class='material-symbols-outlined'>assignment_ind</span> Overview</a>
+                            <a href='" . $clink . "' class='nav-link'><span class='material-symbols-outlined'>assignment_ind</span> Students</a>
                         </li>
                         <li class='nav-item'>
                             <a href='" . $slink . "' class='nav-link'><span class='material-symbols-outlined'>group_add</span> Join Code</a>
