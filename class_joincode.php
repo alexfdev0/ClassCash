@@ -66,7 +66,7 @@ $cstr = strval($code);
         <center>
             <h1>ClassCash Join Code</h1><br><br>
             <h1><?php echo $cstr; ?></h1><br><br>
-            <h3>Go to <strong>https://classcash.xyz/join_class.php</strong> to join this class.</h3>
+            <h3>Go to<br> <strong>https://classcash.xyz/join_class.php</strong><br> to join this class.</h3>
         </center>
     </body>
 </html>
