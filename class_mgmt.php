@@ -89,13 +89,5 @@ if ($result2) {
                 ?>
             </tbody>
         </table>
-        <center>
-            <div class="profile-picture-container">
-                <img src="pictures/stock.webp" alt="Profile Picture" class="profile-picture">
-            </div><br><br>
-            <h2><?php echo $user_data['firstname'] . $user_data['lastname'] ?></h2><br>
-            <h3><?php echo $balance; ?> ClassCoins</h3><br>
-        </center>
-
     </body>
 </html>
