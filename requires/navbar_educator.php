@@ -4,6 +4,7 @@ $clink = "class_mgmt.php?sel=" . $classid;
 $slink = "class_joincode.php?sel=" . $classid;
 $tlink = "class_voucher.php?sel=" . $classid;
 $cilink = "class_inventory.php?sel=" . $classid;
+$selink = "class_settings.php?sel=" . $classid;
 
 echo "
 <nav class='navbar navbar-expand-lg navbar-light bg-light'>
@@ -28,7 +29,7 @@ echo "
                             <a href='" . $cilink . "' class='nav-link'><span class='material-symbols-outlined'>shopping_bag</span> Class Inventory</a>
                         </li>
                         <li class='nav-item'>
-                            <a href='" . $tlink . "' class='nav-link'><span class='material-symbols-outlined'>settings</span> Settings</a>
+                            <a href='" . $selink . "' class='nav-link'><span class='material-symbols-outlined'>settings</span> Settings</a>
                         </li>
                         <li class='nav-item dropdown'>
                             <a class='nav-link dropdown-toggle' href='#' id='navbarDropdown' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
