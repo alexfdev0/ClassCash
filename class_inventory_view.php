@@ -60,6 +60,9 @@ if ($result3) {
     }
 }
 
+$link = "redeem_reward.php?sel=" . $classid . "&rsel=" . $rewardid;
+
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $val = 1;
     $query = "update rewards set redeemed='$VAL' where id='$rewardid'";
@@ -106,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         Owner: <?php echo $rowner_fname . " " . $rowner_lname; ?><br>
         <h2>Actions</h2><br>
             <div class="d-grid gap-2">
-                <a href="redeem_reward.php" class="btn btn-danger">Mark as redeemed</a>
+                <a href=<?php echo $link; ?>  class="btn btn-danger">Mark as redeemed</a>
             </div>
     </body>
 </html>
