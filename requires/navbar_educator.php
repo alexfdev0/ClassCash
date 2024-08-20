@@ -3,6 +3,7 @@
 $clink = "class_mgmt.php?sel=" . $classid;
 $slink = "class_joincode.php?sel=" . $classid;
 $tlink = "class_transfer.php?sel=" . $classid;
+$cilink = "class_inventory.php?sel=" . $classid;
 
 echo "
 <nav class='navbar navbar-expand-lg navbar-light bg-light'>
@@ -24,7 +25,7 @@ echo "
                             <a href='" . $tlink . "' class='nav-link'><span class='material-symbols-outlined'>payments</span> Vouchers</a>
                         </li>
                         <li class='nav-item'>
-                            <a href='" . $tlink . "' class='nav-link'><span class='material-symbols-outlined'>shopping_bag</span> Class Inventory</a>
+                            <a href='" . $cilink . "' class='nav-link'><span class='material-symbols-outlined'>shopping_bag</span> Class Inventory</a>
                         </li>
                         <li class='nav-item'>
                             <a href='" . $tlink . "' class='nav-link'><span class='material-symbols-outlined'>edit</span> Create</a>
