@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <h2><?php echo $rname; ?></h2><br>
         <h3>Overview</h3><br>
         Price: <?php echo $rprice; ?> ClassCoins<br>
-        Owner: <?php echo $rowner_firstname . " " . $rowner_lname; ?><br>
+        Owner: <?php echo $rowner_fname . " " . $rowner_lname; ?><br>
         <h2>Actions</h2><br>
             <form method="post">
                 <button type="submit" class="btn btn-danger"> Mark as redeemed</button>
