@@ -28,6 +28,7 @@ if ($result2) {
     }
 }
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,6 +67,7 @@ if ($result2) {
                     <th scope="col">Reward Name</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
+                    <th scope="col">View Reward</th>
                 </tr>
             </thead>
             <tbody>
@@ -76,10 +78,12 @@ if ($result2) {
                 if ($result) {
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
+                            $rewid = $row['id'];
                             $studentid = $row['studentid'];
                             $rewname = $row['name'];
                             $fname = "";
                             $lname = "";
+                            $rewviewlink = "class_inventory_view.php?sel=" . $classid . "&rsel=" . $rewid;
                             $query2 = "select * from accounts where id='$studentid'";
                             $result2 = mysqli_query($con, $query2);
                             if ($result2) {
@@ -95,6 +99,7 @@ if ($result2) {
                                 <td>" . $rewname . "</td>
                                 <td>" . $fname . "</td>
                                 <td>" . $lname . "</td>
+                                <td><a href=" . $rewviewlink . " class='btn btn-primary'>View Reward</a></td>
                             </tr>
                             ";
                         }
