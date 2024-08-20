@@ -76,8 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <center>
             <h1>Create a Class</h1><br>
             <form method="post">
-                <input class="form-control" type="text" name="cname"><br><br>
-                <input class="form-control" type="text" name="cdesc"><br><br>
+                <input class="form-control" type="text" name="cname" placeholder="Class Name"><br><br>
+                <input class="form-control" type="text" name="cdesc" placeholder="Class Description"><br><br>
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn btn-primary">Create Class</button>
                 </div>
