@@ -64,7 +64,7 @@ if ($result2) {
     </style>
     <body>
         <?php
-        require 'requires/navbar.php';
+        require 'requires/navbar_educator.php';
         ?>
 
       <center>
