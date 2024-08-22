@@ -65,6 +65,7 @@ if ($result2) {
                 <tr>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
+                    <th scope="col">Balance</th>
                 </tr>
             </thead>
             <tbody>
@@ -77,6 +78,7 @@ if ($result2) {
                             $studentid = $row['studentid'];
                             $fname = "";
                             $lname = "";
+                            $sbal = 0;
                             $query2 = "select * from accounts where id='$studentid'";
                             $result2 = mysqli_query($con, $query2);
                             if ($result2) {
@@ -87,10 +89,18 @@ if ($result2) {
                                     }
                                 }
                             }
+                            $query3 = "select * from balances where studentid='$studentid' and classid='$classid'";
+                            $result3 = mysqli_query($con, $query3);
+                            if ($result3 && mysqli_num_rows($result3) > 0) {
+                                while ($row = mysqli_fetch_assoc($result3)) {
+                                    $sbal = $row['balance'];
+                                }
+                            }
                             echo "
                             <tr>
                                 <td>" . $fname . "</td>
                                 <td>" . $lname . "</td>
+                                <td>" . $sbal . "</td>
                             </tr>
                             ";
                         }
