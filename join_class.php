@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
     $result = mysqli_query($con, $query);
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($query)) {
+            while ($row = mysqli_fetch_assoc($result)) {
                 $classid = $row['classid'];
             }
         } else {
