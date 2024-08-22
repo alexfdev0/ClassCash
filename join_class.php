@@ -6,7 +6,7 @@ $id = $user_data['id'];
 
 $wtext = "";
 if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
-    $classcode = $_POST['classocode'];
+    $classcode = $_POST['classcode'];
     $classid = 0;
     $query = "select * from classes where classcode='$classcode'";
     $result = mysqli_query($con, $query);
