@@ -5,7 +5,7 @@ $user_data = check_login($con);
 $sid = $user_data['id'];
 
 $classid = $_GET['sel'];
-$rewardid = $_GET['rsel'];
+$rewardid = $_GET['vsel'];
 $clink = "class_voucher.php?sel=" . $classid;
 $slink = "class_store.php?sel=" . $classid;
 
