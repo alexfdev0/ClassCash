@@ -71,6 +71,7 @@ if ($result2) {
                     if ($result) {
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
+                                $id = $row['id'];
                                 $name = $row['name'];
                                 $price = $row['points'];
 
