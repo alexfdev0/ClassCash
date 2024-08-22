@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
             $wtext = "We could not find a class with that code.";
         }
     }
-    $query2 = "insert into class_entries (studentid, classid) values ('$id', '$classcode')";
+    $query2 = "insert into class_entries (studentid, classid) values ('$id', '$classid')";
     $result2 = mysqli_query($con, $query2);
     header("Location: home_student.php");
 }
