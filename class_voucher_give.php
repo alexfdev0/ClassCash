@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     </style>
     <body>
         <?php
-        require 'requires/navbar.php';
+        require 'requires/navbar_educator.php';
         ?>
 
         <h1>Voucher</h1><br>
