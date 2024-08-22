@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
         <center>
             <h1>Join a Class</h1><br>
             Please enter the code on your teacher's screen to join.<br>
-            <form method="submit">
+            <form method="post">
                 <input type="text" class="form-control" placeholder="Class Code" name="classcode"><br>
                 <div style="color: #FF5959;"><?php echo $wtext; ?></div><br> 
                 <div class="d-grid gap-2">
