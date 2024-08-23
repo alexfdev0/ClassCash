@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <button type="submit" class="btn btn-primary">Send Voucher</button><br><br><br>
         </form>
         <div class="d-grid gap-2">
-            <a class="btn btn-danger" href=<?php echo $slink; ?>>Cancel</a>
+            <a class="btn btn-danger" href=<?php echo $clink; ?>>Cancel</a>
         </div>
     </body>
 </html>
