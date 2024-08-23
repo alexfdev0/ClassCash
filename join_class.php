@@ -9,7 +9,7 @@ $body = "";
 
 $classid = $_GET['classid'];
 
-$query = "select * from classes where classid='$classid'";
+$query = "select * from classes where id='$classid'";
 $result = mysqli_query($con, $query);
 if ($result && mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
