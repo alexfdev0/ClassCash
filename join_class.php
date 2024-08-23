@@ -4,24 +4,27 @@ require 'requires/autoload.php';
 $user_data = check_login($con);
 $id = $user_data['id'];
 
-$wtext = "";
-if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
-    $classcode = $_POST['classcode'];
-    $classid = 0;
-    $query = "select * from classes where classcode='$classcode'";
-    $result = mysqli_query($con, $query);
-    if ($result) {
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                $classid = $row['classid'];
-            }
-        } else {
-            $wtext = "We could not find a class with that code.";
+$h1 = "";
+$body = "";
+
+$classid = $_GET['classid'];
+
+$query = "select * from classes where classid='$classid'";
+$result = mysqli_query($con, $query);
+if ($result && mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $cid = $row['id'];
+        $name = $row['name'];
+        $query2 = "insert into class_entries (studentid, classid) values ('$id', '$cid')";
+        $result2 = mysqli_query($con, $query2);
+        if ($result2) {
+            $h1 = "Success!";
+            $body = "You have successfully joined this class " . $name;
         }
     }
-    $query2 = "insert into class_entries (studentid, classid) values ('$id', '$classid')";
-    $result2 = mysqli_query($con, $query2);
-    header("Location: home_student.php");
+}else {
+    $h1 = "Ooops";
+    $body = "There was an error finding that class.";
 }
 ?>
 
@@ -70,24 +73,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" ) {
                                 <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="join_class.php" class="nav-link"><span class="material-symbols-outlined">add</span> Join a Class</a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
         <center>
-            <h1>Join a Class</h1><br>
-            Please enter the code on your teacher's screen to join.<br>
-            <form method="post">
-                <input type="text" class="form-control" placeholder="Class Code" name="classcode"><br>
-                <div style="color: #FF5959;"><?php echo $wtext; ?></div><br> 
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary">Join Class</button>
-                </div>
-            </form>
+            <h1><?php echo $h1; ?></h1><br><br>
+            <?php echo $body; ?><br>
+            <div class="d-grid gap-2">
+                <a href="home_student.php" class="btn btn-primary">Back Home</a>
+            </div>
         </center>
     </body>
 </html>
