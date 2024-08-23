@@ -20,7 +20,7 @@ echo "
                             <a href='" . $clink . "' class='nav-link'><span class='material-symbols-outlined'>assignment_ind</span> Students</a>
                         </li>
                         <li class='nav-item'>
-                            <a href='" . $slink . "' class='nav-link'><span class='material-symbols-outlined'>group_add</span> Join Code</a>
+                            <a href='" . $slink . "' class='nav-link'><span class='material-symbols-outlined'>group_add</span> Join Link</a>
                         </li>
                         <li class='nav-item'>
                             <a href='" . $tlink . "' class='nav-link'><span class='material-symbols-outlined'>payments</span> Vouchers</a>
