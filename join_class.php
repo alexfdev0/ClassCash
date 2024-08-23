@@ -17,7 +17,10 @@ if ($result && mysqli_num_rows($result) > 0) {
         $name = $row['name'];
         $query2 = "insert into class_entries (studentid, classid) values ('$id', '$cid')";
         $result2 = mysqli_query($con, $query2);
-        if ($result2) {
+        $defbal = 0;
+        $query3 = "insert into balances (classid, studentid, balance) values ('$cid', '$id', '$defbal')";
+        $result3 = mysqli_query($con, $query3);
+        if ($result3) {
             $h1 = "Success!";
             $body = "You have successfully joined this class " . $name;
         }

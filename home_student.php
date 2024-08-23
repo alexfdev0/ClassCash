@@ -50,9 +50,6 @@ $id = $user_data['id'];
                                 <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="join_class.php" class="nav-link"><span class="material-symbols-outlined">add</span> Join a Class</a>
-                        </li>
                     </ul>
                 </div>
             </div>
