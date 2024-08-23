@@ -64,7 +64,7 @@ $link = "https://classcash.xyz/join_class.php?classid=" . $classid;
         ?>
         <center>
             <h1>ClassCash Join Link</h1><br><br>
-            <h2>Go to<br> <strong><?php echo $link; ?></strong><br> to join this class.</h2>
+            <h2>Go to<br><br><strong><?php echo $link; ?></strong><br><br> to join this class.</h2>
         </center>
     </body>
 </html>
