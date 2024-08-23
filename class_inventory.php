@@ -78,7 +78,7 @@ if ($result2) {
                 if ($result) {
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $rewid = $row['id'];
+                            $rewid = $row['rewardid'];
                             $studentid = $row['studentid'];
                             $rewname = $row['name'];
                             $fname = "";
