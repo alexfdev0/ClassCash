@@ -21,7 +21,6 @@ if ($result2) {
         while ($row = mysqli_fetch_assoc($result2)) {
             $classname = $row['name'];
             $owner = $row['owner'];
-            $code = $row['classcode'];
             if ($sid != $owner) {
                 echo "Unauthorized.";
                 exit;
@@ -30,7 +29,7 @@ if ($result2) {
     }
 }
 
-$cstr = strval($code);
+$link = "https://classcash.xyz/join_class.php?classid=" . strval($classid);
 
 ?>
 <!DOCTYPE html>
@@ -64,9 +63,8 @@ $cstr = strval($code);
         require 'requires/navbar_educator.php';
         ?>
         <center>
-            <h1>ClassCash Join Code</h1><br><br>
-            <h1><?php echo $cstr; ?></h1><br><br>
-            <h3>Go to<br> <strong>https://classcash.xyz/join_class.php</strong><br> to join this class.</h3>
+            <h1>ClassCash Join Link</h1><br><br>
+            <h2>Go to<br> <strong><?php $link; ?></strong><br> to join this class.</h2>
         </center>
     </body>
 </html>
