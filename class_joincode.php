@@ -29,7 +29,7 @@ if ($result2) {
     }
 }
 
-$link = "https://classcash.xyz/join_class.php?classid=" . strval($classid);
+$link = "https://classcash.xyz/join_class.php?classid=" . $classid;
 
 ?>
 <!DOCTYPE html>
