@@ -71,7 +71,7 @@ if ($result2) {
         <h1>Voucher give successful</h1><br><br>
         Success! You have successfully sent the student that voucher.<br>
         <div class="d-grid gap-2">
-          <a href=<?php echo $plink; ?> class="btn btn-primary">Back to overview</a>
+          <a href=<?php echo $tlink; ?> class="btn btn-primary">Back to overview</a>
         </div>
       </center>
 
