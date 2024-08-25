@@ -36,6 +36,16 @@ if ($result2) {
     }
 }
 
+$query = "select * from balances where studentid='$sid' and classid='$classid'";
+$result = mysqli_query($con, $query);
+if ($result) {
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $balance = $row['balance'];
+        }
+    }
+}
+
 $diff = $rprice - $balance;
 ?>
 <!DOCTYPE html>
