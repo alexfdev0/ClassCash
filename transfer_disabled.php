@@ -11,22 +11,8 @@ $slink = "class_store.php?sel=" . $classid;
 
 $rname = "";
 $rdescr = "";
-$rprice = 0;
 
-$balance = 0;
 $classname = "a";
-
-$diff = $rprice - $balance;
-
-$query = "select * from rewards where id='$rewardid'";
-$result = mysqli_query($con, $query);
-if ($result) {
-    if (mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $rprice = $row['price'];
-        }
-    }
-}
 
 $query2 = "select * from classes where id='$classid'";
 $result2 = mysqli_query($con, $query2);
