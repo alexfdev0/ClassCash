@@ -16,8 +16,6 @@ $rprice = 0;
 $balance = 0;
 $classname = "a";
 
-$diff = $rprice - $balance;
-
 $query = "select * from rewards where id='$rewardid'";
 $result = mysqli_query($con, $query);
 if ($result) {
@@ -37,6 +35,8 @@ if ($result2) {
         }
     }
 }
+
+$diff = $rprice - $balance;
 ?>
 <!DOCTYPE html>
 <html lang="en">
