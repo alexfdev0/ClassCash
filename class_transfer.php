@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             header("Location: transfer_successful.php?sel=" . $classid);
                         }
                     }else{
-                        echo "<script>alert('Transfer failure: User does not exist within this class..')</script>";
+                        echo "<script>alert('Transfer failure: User does not exist within this class.')</script>";
                     }
                 }
             }else{
