@@ -65,8 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         while ($row = mysqli_fetch_assoc($result)) {
                             $recipbal = $row['balance'];
                             $amtafter = $recipbal + $amt;
-                            $query = "update balances set balance='$amtafter' where studentid='$recipid' and classid='$classid'";
-                            $result = mysqli_query($con, $query);
+                            $query3 = "update balances set balance='$amtafter' where studentid='$recipid' and classid='$classid'";
+                            $result3 = mysqli_query($con, $query);
                             header("Location: transfer_successful.php?sel=" . $classid);
                         }
                     }else{
