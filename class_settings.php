@@ -74,8 +74,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <h1>Settings</h1><br><br>
         <h4>Class Information</h4><br>
         <form method="post">
-            <input name="class_name" class="form-control" placeholder="Class Name" value=<?php echo $classname; ?>><br><br>
-            <textarea name="class_descr" class="form-control" rows="3" placeholder="Class Description" value=<?php echo $classdescr; ?>></textarea><br><br>
+            <input name="class_name" class="form-control" placeholder="Class Name" value=<?php echo htmlspecialchars($classname); ?>><br><br>
+            <textarea name="class_descr" class="form-control" rows="3" placeholder="Class Description" value=<?php echo htmlspecialchars($classdescr); ?>></textarea><br><br>
             <h4>Class Settings</h4><br>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" name="tfrs" id="enableTransfers" <?php if ($tfrenabled == 1) { echo "checked"; }?>>
