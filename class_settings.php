@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <h1>Settings</h1><br><br>
         <h4>Class Information</h4><br>
         <form method="post">
-            <input name="class_name" class="form-control" placeholder="Class Name" value=<?php echo "value=" . htmlspecialchars($classname); ?>><br><br>
+            <input name="class_name" class="form-control" placeholder="Class Name" <?php echo "value=" . htmlspecialchars($classname); ?>><br><br>
             <textarea name="class_descr" class="form-control" rows="3" placeholder="Class Description" <?php echo "value=" . htmlspecialchars($classdescr); ?>></textarea><br><br>
             <h4>Class Settings</h4><br>
             <div class="form-check">
