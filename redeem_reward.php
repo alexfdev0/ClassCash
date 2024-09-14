@@ -29,7 +29,7 @@ if ($result2) {
     }
 }
 $rval = 1;
-$query3 = "update rewards set redeemed='$rval' where id='$rewardid'";
+$query3 = "update inventory set redeemed='$rval' where id='$rewardid'";
 $result3 = mysqli_query($con, $query3);
 
 if ($result3) {
