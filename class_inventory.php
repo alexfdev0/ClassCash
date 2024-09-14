@@ -63,12 +63,22 @@ if ($result2) {
                 if ($result) {
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $rewid = $row['id'];
+                            $reid = $row['id'];
+                            $rewid = $row['rewardid'];
                             $studentid = $row['studentid'];
-                            $rewname = $row['name'];
+                            $rewname = "";
+                            
+                            $query3 = "select * from rewards where id='$rewid'";
+                            $result3 = mysqli_fetch_assoc($con, $query3);
+                            if ($result3 && mysqli_num_rows($result3)) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $rewname = $row['name'];
+                                }
+                            }
+
                             $fname = "";
                             $lname = "";
-                            $rewviewlink = "class_inventory_view.php?sel=" . $classid . "&rsel=" . $rewid;
+                            $rewviewlink = "class_inventory_view.php?sel=" . $classid . "&rsel=" . $reid;
                             $query2 = "select * from accounts where id='$studentid'";
                             $result2 = mysqli_query($con, $query2);
                             if ($result2) {
