@@ -25,7 +25,7 @@ require 'requires/autoload.php';
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a href="join_class.php" class="nav-link"><span class="material-symbols-outlined">login</span> Log in and sign up</a>
+                            <a href="login.php" class="nav-link"><span class="material-symbols-outlined">login</span> Log in and sign up</a>
                         </li>
                     </ul>
                 </div>
