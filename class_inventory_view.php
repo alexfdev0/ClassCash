@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         Time purchased: <?php echo $time; ?><br>
         <h2>Actions</h2><br>
             <div class="d-grid gap-2">
-                <a href=<?php echo $link; ?>  class="btn btn-danger"><span class="material-symbols-outlined">security</span> Mark as redeemed</a>
+                <a href=<?php echo $link; ?>  class="btn btn-danger"><span class="material-symbols-outlined">security</span> Mark as redeemed <span class="material-symbols-outlined">security</span> </a>
             </div>
     </body>
 </html>
