@@ -71,7 +71,7 @@ if ($result2) {
                             $query3 = "select * from rewards where id='$rewid'";
                             $result3 = mysqli_fetch_assoc($con, $query3);
                             if ($result3 && mysqli_num_rows($result3)) {
-                                while ($row = mysqli_fetch_assoc($result)) {
+                                while ($row = mysqli_fetch_assoc($result3)) {
                                     $rewname = $row['name'];
                                 }
                             }
