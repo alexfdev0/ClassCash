@@ -16,6 +16,7 @@
             <div class="d-grid gap-2">
                 <a href="login_student.php" class="btn btn-primary">I'm a student</a>
                 <a href="login_educator.php" class="btn btn-primary">I'm a teacher</a>
+                <a href="home.php" class="btn btn-danger">Back</a>
             </div>
         </center>
     </body>
