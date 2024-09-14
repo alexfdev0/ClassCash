@@ -74,7 +74,7 @@ if ($result3) {
     }
 }
 
-$link = "redeem_reward.php?sel=" . $classid . "&rsel=" . $rewardid;
+$link = "redeem_reward.php?sel=" . $classid . "&rsel=" . $inventoryid;
 
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
