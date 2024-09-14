@@ -24,7 +24,7 @@ $time = "";
 
 $rewardid = 0;
 
-$query0 = "select * from inventory where id='$inventoryid'";
+$query = "select * from inventory where id='$inventoryid'";
 $result = mysqli_query($con, $query);
 if ($result) {
     if (mysqli_num_rows($result) > 0) {
